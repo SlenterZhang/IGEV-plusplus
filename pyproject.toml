@@ -1,0 +1,27 @@
+[project]
+name = "igev-plusplus-env"
+version = "0.1.0"
+requires-python = ">=3.8,<3.9"
+
+dependencies = [
+    "torch==1.12.1+cu113",
+    "torchvision==0.13.1+cu113",
+    "torchaudio==0.12.1",
+    "tqdm",
+    "scipy",
+    "opencv-python",
+    "scikit-image",
+    "tensorboard",
+    "matplotlib",
+    "timm==0.5.4",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu113" }
+torchvision = { index = "pytorch-cu113" }
+torchaudio = { index = "pytorch-cu113" }
+
+[[tool.uv.index]]
+name = "pytorch-cu113"
+url = "https://download.pytorch.org/whl/cu113"
+explicit = true
